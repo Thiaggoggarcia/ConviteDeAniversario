@@ -32,7 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1568605117036-5fe5e7185743?q=80&w=2000&auto=format&fit=crop') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('image/Fundo_page.png') no-repeat center center;
     text-align: center;
     padding: 20px;
     animation: fadeIn 1.5s ease-in-out;
@@ -46,14 +46,15 @@ body {
     font-size: 4rem;
     font-weight: 700;
     color: var(--gold);
-    text-shadow: 0 0 15px var(--glow-color);
+    text-shadow: 0 0 12px var(--gold);
 }
 
 .welcome-content p {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
     margin-bottom: 2rem;
     color: var(--text-primary);
+    text-shadow: 0 0 12px var(--text-primary);
 }
 
 #guest-name-input {
