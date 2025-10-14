@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. TELA DE ENTRADA E PERSONALIZAÇÃO
     enterButton.addEventListener('click', () => {
         const guestName = guestNameInput.value.trim();
-        if (guestName === "") {
+        if (guestName === "" || !/^[A-Za-zÀ-ÿ\s]+$/.test(guestName)) {
             alert("Por favor, digite seu nome para continuar.");
             return;
         }

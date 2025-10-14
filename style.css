@@ -40,125 +40,123 @@ body {
 
 .welcome-content {
   max-width: 500px;
-
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    color: var(--gold);
-    text-shadow: 0 0 12px var(--gold);
-  }
-  
-  p {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
-    color: var(--text-primary);
-    text-shadow: 0 0 12px var(--text-primary);
-  }
-  
-  input {
-    width: 100%;
-    padding: 15px;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid var(--gold);
-    border-radius: 8px;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-    transition: all 0.8s ease;
-    
-  }
-  
-  input::placeholder {
-    color: var(--text-secondary);
-  }
-
-  input:focus {
-    outline: none;
-    box-shadow: 0 0 10px var(--glow-color);
-    background: rgba(255, 255, 255, 0.15);
-  }
-  
-  #enter-button {
-      padding: 15px 30px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      background: var(--gold);
-      color: var(--dark-bg);
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-  }
-  
-  #enter-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px var(--glow-color);
-  }
-  
-  /* CONTROLE DE MÚSICA */
-  #music-toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 50px;
-      height: 50px;
-      background: rgba(30, 30, 30, 0.8);
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      border-radius: 50%;
-      font-size: 1.5rem;
-      cursor: pointer;
-      z-index: 1000;
-      transition: all 0.3s ease;
-  }
-  
-  #music-toggle:hover {
-      background: var(--gold);
-      color: var(--dark-bg);
-      transform: scale(1.1);
-  }
-  
-  /* CONTEÚDO PRINCIPAL */
-  #main-content {
-      animation: slideUp 1s ease-out forwards;
-  }
-  
-  .main-header {
-      text-align: center;
-      padding: 4rem 1rem 2rem;
-  }
-  
-  #personalized-greeting {
-      font-size: 2.5rem;
-      font-weight: 600;
-      background: -webkit-linear-gradient(45deg, var(--gold), var(--burnt-orange));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-  }
-  
-  .section-container {
-      max-width: 900px;
-      margin: 0 auto 4rem auto;
-      padding: 2rem;
-      background-color: var(--dark-card);
-      border-radius: 12px;
-      border: 1px solid rgba(255, 215, 0, 0.2);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInSection 0.8s ease-out forwards;
-  }
-  
-  .section-container h2 {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 2rem;
-      color: var(--gold);
-  }
 }
 
+.welcome-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-shadow: 0 0 12px var(--gold);
+}
+
+.welcome-content p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  text-shadow: 0 0 12px var(--text-primary);
+}
+
+#guest-name-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+#guest-name-input::placeholder {
+  color: var(--text-secondary);
+}
+
+#guest-name-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px var(--glow-color);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#enter-button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: var(--gold);
+  color: var(--dark-bg);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+#enter-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--glow-color);
+}
+
+/* CONTROLE DE MÚSICA */
+#music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+#music-toggle:hover {
+    background: var(--gold);
+    color: var(--dark-bg);
+    transform: scale(1.1);
+}
+
+/* CONTEÚDO PRINCIPAL */
+#main-content {
+    animation: slideUp 1s ease-out forwards;
+}
+
+.main-header {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+}
+
+#personalized-greeting {
+    font-size: 2.5rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(45deg, var(--gold), var(--burnt-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-container {
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+    padding: 2rem;
+    background-color: var(--dark-card);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInSection 0.8s ease-out forwards;
+}
+
+.section-container h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--gold);
+}
 
 /* CONTAGEM REGRESSIVA */
 .countdown-container {
