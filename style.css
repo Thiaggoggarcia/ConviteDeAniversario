@@ -32,15 +32,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('image/Fundo-Cell.png') no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('image/Gemini_Gener.png') no-repeat center/cover;
   text-align: center;
   padding: 20px;
   animation: fadeIn 1.5s ease-in-out;
-}
-@media (max-width: 768px) {
-  #welcome-screen {
-    
-  }
 }
 
 .welcome-content {
@@ -63,7 +58,7 @@ body {
 }
 
 #guest-name-input {
-  width: 100%;
+  width: 80%;
   padding: 15px;
   font-size: 1rem;
   background: rgba(255, 255, 255, 0.1);
@@ -205,6 +200,38 @@ body {
 }
 
 /* DETALHES DO EVENTO */
+.event-details div {
+	position: relative;
+		
+}
+
+.event-details h2::after {
+    content: '';
+    position: absolute;
+		margin-left: 2px;
+		padding-inline: 7px;
+		top: 50%;
+    width: 30%;
+    height: 4px;
+    background-color: var(--gold);
+    border-radius: 2px;
+		text-align: center;
+
+}
+.event-details h2::before {
+    content: '';
+    position: absolute;
+		margin-right: 2px;
+		padding-inline: 7px;
+		top: 50%;
+    width: 30%;
+    height: 4px;
+    background-color: var(--gold);
+    border-radius: 2px;
+		text-align: center;
+
+}
+
 .event-details p {
     font-size: 1.1rem;
     line-height: 1.8;
