@@ -126,8 +126,7 @@ body {
 }
 
 .main-header {
-    text-align: center;
-    padding: 4rem 1rem 2rem;
+    text-align: center;    padding: 4rem 1rem 2rem;
     max-width: 1200px;
 }
 
@@ -138,6 +137,7 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-inline: 1rem;
 }
 
 .section-container {
@@ -204,7 +204,7 @@ body {
 .title {
   display: flex;
   align-items: center;
-	gap: 7px;
+  gap: 7px;
 
 	&::before,
 	&::after {
@@ -245,7 +245,7 @@ body {
 
 /* SEÇÃO "CONHEÇA O ESPAÇO"*/
 .carousel-indicators{
-    bottom: 0px;
+    bottom: -1px;
 }
 .carousel-indicators li {
     border-radius: 50%;
