@@ -7,6 +7,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -56,34 +57,100 @@
 
 		<section id="venue" class="section-container">
 				<h2 class="title">Conheça o Espaço</h2>
-				<div class="carousel">
-					<img src="/image/darya-luganskaya-SSpEIUBRG9s-unsplash.jpg" alt="Foto da Chácara 1">
+				<!-- 			
+				<p>Uma chácara completa com piscina, salão de festas e uma área verde deslumbrante, o cenário perfeito para nossa celebração.</p> -->
 
-					<img src="/image/evgeni-tcherkasski-hegb9Y8dKos-unsplash.jpg" alt="Foto da Chácara 1">
-					<img src="/image/evgeni-tcherkasski-hegb9Y8dKos-unsplash.jpg" alt="Foto da Chácara 1">
+				<div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="5000" data-ride="true">
+					<ol class="carousel-indicators">
+						<li data-target="#carouselControls" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselControls" data-slide-to="1"></li>
+						<li data-target="#carouselControls" data-slide-to="2"></li>
+						<li data-target="#carouselControls" data-slide-to="3"></li>
+						<li data-target="#carouselControls" data-slide-to="4"></li>
+						<li data-target="#carouselControls" data-slide-to="5"></li>
+						<li data-target="#carouselControls" data-slide-to="6"></li>
+					</ol>
+					
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-100" src="./image/Image_01.jpeg" alt="Primeiro slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Frente do Espaço</h5>
+								<p>Este será o local principal da festa.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="./image/Image_02.jpeg" alt="Segundo slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Segundo slide</h5>
+								<p>Descrição do segundo slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="./image/Image_03.jpeg" alt="Terceiro slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Terceiro slide</h5>
+								<p>Descrição do terceiro slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="./image/Image_04.jpeg" alt="Quarto slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Quarto slide</h5>
+								<p>Descrição do quarto slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="./image/Image_05.jpeg" alt="Quinto slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Quinto slide</h5>
+								<p>Descrição do quinto slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="./image/Image_06.webp" alt="Sexto slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Sexto slide</h5>
+								<p>Descrição do sexto slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="./image/Image_07.webp" alt="Sétimo slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Sétimo slide</h5>
+								<p>Descrição do sétimo slide.</p>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Anterior</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Próximo</span>
+					</a>
 				</div>
-				
-				<p>Uma chácara completa com piscina, salão de festas e uma área verde deslumbrante, o cenário perfeito para nossa celebração.</p>
 		</section>
 
 			<section id="attractions" class="section-container">
 					<h2 class="title">Atrações</h2>
 					<div class="attractions-grid">
 							<div class="card">
-									<h3>Feijoada & Churrasco</h3>
-									<p>Sabores que abraçam a alma para começar a festa com energia total.</p>
+								<h3>Feijoada & Churrasco</h3>
+								<p>Sabores que abraçam a alma para começar a festa com energia total.</p>
 							</div>
 							<div class="card">
-									<h3>Drinks & Coquetéis</h3>
-									<p>Um bar completo com criações exclusivas para brindar a noite toda.</p>
+								<h3>Drinks & Coquetéis</h3>
+								<p>Um bar completo com criações exclusivas para brindar a noite toda.</p>
 							</div>
 							<div class="card">
-									<h3>Música</h3>
-									<p>A trilha sonora perfeita para criar memórias, do sunset à madrugada.</p>
+								<h3>Música</h3>
+								<p>A trilha sonora perfeita para criar memórias, do sunset à madrugada.</p>
 							</div>
 							<div class="card">
-									<h3>Lazer</h3>
-									<p>Um espaço muito amplo com piscina, campo de futebol e muita área para conversar e relaxar.</p>
+								<h3>Lazer</h3>
+								<p>Um espaço muito amplo com piscina, campo de futebol e muita área para conversar e relaxar.</p>
 							</div>
 							<div class="card">
 								<h3>Playground</h3>
@@ -95,23 +162,25 @@
 			<section id="messages" class="section-container">
 					<h2>Deixe sua mensagem</h2>
 					<form id="message-form">
-							<textarea id="message-text" placeholder="Escreva aqui sua mensagem para o Thiago..." required></textarea>
-							<input type="text" id="music-suggestion" placeholder="Sugestão de música (opcional)">
-							<button type="submit">Enviar</button>
+						<textarea id="message-text" placeholder="Escreva aqui sua mensagem para o Thiago..." required></textarea>
+						<input type="text" id="music-suggestion" placeholder="Sugestão de música (opcional)">
+						<button type="submit">Enviar</button>
 					</form>
 					<div id="messages-timeline">
-							<h3>Mural de Recados</h3>
-							<div id="messages-list">
-									</div>
+						<h3>Mural de Recados</h3>
+						<div id="messages-list"></div>
 					</div>
 			</section>
 
 			<footer>
-					<p class="quote">“Versão 3.0 — mais consciente, mais intensa, mais viva.”</p>
-					<p class="hashtag">#Sunset30Experience</p>
+				<p class="quote">“Versão 3.0 — mais consciente, mais intensa, mais viva.”</p>
+				<p class="hashtag">#Sunset30Experience</p>
 			</footer>
 	</main>
 
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="script.js"></script>
 </body>
 </html>
