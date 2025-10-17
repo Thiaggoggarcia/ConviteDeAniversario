@@ -126,8 +126,10 @@ body {
 }
 
 .main-header {
-    text-align: center;    padding: 4rem 1rem 2rem;
+    text-align: center;
+    padding: 4rem 1rem 2rem;
     max-width: 1200px;
+    margin-inline: auto;
 }
 
 #personalized-greeting {
@@ -206,8 +208,7 @@ body {
   align-items: center;
   gap: 7px;
 
-	&::before,
-	&::after {
+	&::before, &::after {
 		content:"";
 		flex: 1;
 		border-bottom: 4px solid var(--gold);
@@ -217,7 +218,7 @@ body {
 
 .event-details p {
     font-size: 1.1rem;
-    line-height: 1.8;
+    line-height: 1.8;   
     margin-bottom: 1rem;
 }
 
@@ -253,7 +254,6 @@ body {
     height: 10px;
     margin-inline: 6px;
 }
-
 .carousel-inner img {
     filter: sepia(0.2) brightness(0.9) contrast(1.1);
 }
@@ -264,24 +264,39 @@ body {
     right: 0px;
     background-color: rgba(30, 30, 30, 0.5);
 }
+.carousel-caption h5{
+    color: var(--text-primary);
+}
 .carousel-caption p{
-    font-size: 1.1rem;
     color: var(--text-secondary);
 }
-
 /* SEÇÃO "ATRAÇÕES" */
 .attractions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
     gap: 20px;
 }
-
 .card {
     background-color: var(--dark-bg);
     padding: 25px;
     border-radius: 8px;
     border-left: 3px solid var(--gold);
     transition: all 0.3s ease;
+}
+#card-1{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('image/Feijoada-deliciosa-780x520.jpg') no-repeat center/cover;
+}
+#card-2{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('image/Churrasco.webp') no-repeat center/cover;
+}
+#card-3{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('image/Drinks.jpg') no-repeat center/cover;
+}
+#card-4{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('image/Musica.webp') no-repeat center/cover;
+}
+#card-5{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('image/Lazer.png') no-repeat center/cover;
 }
 
 .card:hover {
@@ -366,6 +381,23 @@ body {
     font-style: italic;
     color: var(--text-secondary);
 }
+
+/* BOTÃO WHATSAPP */
+#icon-whatsapp {
+    position: fixed ;
+    bottom: 85px ;
+    right: 20px ;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 999 ;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
 
 /* RODAPÉ */
 footer {

@@ -13,12 +13,16 @@
 </head>
 <body>
 	<!--Audio -->
-	<audio id="ambient-music" loop>
-		<source src="SORRI, SOU REI - Harry - Brega do Bruxo.mp3" type="audio/mpeg">
+	<audio id="ambient-music" loop >
+		<source src="./music/Sorri, sou rei.mp3" type="audio/mpeg">
 		Seu navegador não suporta o elemento de áudio.
 	</audio>
 	<button id="music-toggle" class="hidden">🔊</button>
-	<!--Pagina de Boas vindas Festa até o amanhecer All Night Long-->
+	<!-- Ícone do WhatsApp -->
+	<a id="icon-whatsapp" class="hidden" href="https://wa.me/5598984702809" target="_blank">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+	</a>
+	<!--Pagina de Boas vindas Festa até o amanhecer #AteOAmanhecer-->
 	<div id="welcome-screen">
 		<div class="welcome-content">
 			<h1>Thiago Garcia 3.0</h1>
@@ -122,49 +126,53 @@
 			</div>
 		</section>
 
-			<section id="attractions" class="section-container">
-					<h2 class="title">Atrações</h2>
-					<div class="attractions-grid">
-							<div class="card">
-								<h3>Feijoada & Churrasco</h3>
-								<p>Sabores que abraçam a alma para começar a festa com energia total.</p>
-							</div>
-							<div class="card">
-								<h3>Drinks & Coquetéis</h3>
-								<p>Um bar completo com criações exclusivas para brindar a noite toda.</p>
-							</div>
-							<div class="card">
-								<h3>Música</h3>
-								<p>A trilha sonora perfeita para criar memórias, do sunset à madrugada.</p>
-							</div>
-							<div class="card">
-								<h3>Lazer</h3>
-								<p>Um espaço muito amplo com piscina, campo de futebol e muita área para conversar e relaxar.</p>
-							</div>
-							<div class="card">
-								<h3>Playground</h3>
-								<p>Para as crianças teremos piscina infantil e um pula-pula.</p>
-							</div>
-					</div>
-			</section>
+		<section id="attractions" class="section-container">
+			<h2 class="title">Atrações</h2>
+			<div class="attractions-grid">
+				<div id="card-1" class="card">
+					<h3>Feijoada</h3>
+					<p>Prepare-se para saborear uma feijoada irresistível, cheia de sabor e energia pra festa durar até o amanhecer!</p>
+				</div>
+				<div id="card-2" class="card">
+					<h3>Churrasco</h3>
+					<p>Vai rolar aquele churrasco irresistível: carne no fogo, música boa e muita diversão garantida!</p>
+				</div>
+				<div id="card-3" class="card">
+					<h3>Drinks & Coquetéis</h3>
+					<p>Drinks incríveis que vão deixar sua festa ainda mais animada!</p>
+				</div>
+				<div id="card-4" class="card">
+					<h3>Música</h3>
+					<p>Vai ter música de todos os estilos, agradando todos os gostos e mantendo a festa animada do início ao fim!</p>
+				</div>
+				<div id="card-5" class="card">
+					<h3>Lazer</h3>
+					<p>Um espaço muito amplo com piscina, campo de futebol e muita área para conversar e relaxar.</p>
+				</div>
+				<div class="card">
+					<h3>Playground</h3>
+					<p>Para as crianças teremos piscina infantil, pula-pula, escorregador e muito mais!</p>
+				</div>
+			</div>
+		</section>
 
-			<section id="messages" class="section-container">
-					<h2>Deixe sua mensagem</h2>
-					<form id="message-form">
-						<textarea id="message-text" placeholder="Escreva aqui sua mensagem para o Thiago..." required></textarea>
-						<input type="text" id="music-suggestion" placeholder="Sugestão de música (opcional)">
-						<button type="submit">Enviar</button>
-					</form>
-					<div id="messages-timeline">
-						<h3>Mural de Recados</h3>
-						<div id="messages-list"></div>
-					</div>
-			</section>
-
-			<footer>
-				<p class="quote">“Versão 3.0 — mais consciente, mais intensa, mais viva.”</p>
-				<p class="hashtag">#Sunset30Experience</p>
-			</footer>
+		<section id="messages" class="section-container">
+				<h2>Deixe sua mensagem</h2>
+				<form id="message-form">
+					<textarea id="message-text" placeholder="Escreva aqui sua mensagem para o Thiago..." required></textarea>
+					<input type="text" id="music-suggestion" placeholder="Sugestão de música (opcional)">
+					<button type="submit">Enviar</button>
+				</form>
+				<div id="messages-timeline">
+					<h3>Mural de Recados</h3>
+					<div id="messages-list"></div>
+				</div>
+		</section>
+		
+		<footer>
+			<p class="quote">“Versão 3.0 — venha viver este momento, intenso e inesquecível.”</p>
+			<p class="hashtag">#AteOAmanhecer</p>
+		</footer>
 	</main>
 
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
