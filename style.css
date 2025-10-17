@@ -245,9 +245,9 @@ body {
 
 /* SEÇÃO "CONHEÇA O ESPAÇO"*/
 .carousel-indicators{
-    bottom: -1px;
+    bottom: -10px;
 }
-.carousel-indicators li {
+.carousel-indicators [data-bs-target]{
     border-radius: 50%;
     width: 10px;
     height: 10px;
@@ -259,12 +259,12 @@ body {
 }
 
 .carousel-caption{
-    bottom: 5px;
-    background-color: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(30, 30, 30, 0.5);
 }
-
-#venue p {
-    text-align: center;
+.carousel-caption p{
     font-size: 1.1rem;
     color: var(--text-secondary);
 }
@@ -441,9 +441,9 @@ footer .hashtag {
 
 @media (max-width: 480px) {
     .carousel-caption h5 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     .carousel-caption p {
-        font-size: 0.9rem;
+        font-size: 0.5rem;
     }
 }

@@ -7,7 +7,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -55,82 +56,70 @@
 			</div>
 		</section>
 
-		<section id="venue" class="section-container">
-				<h2 class="title">Conheça o Espaço</h2>
-				<!-- 			
-				<p>Uma chácara completa com piscina, salão de festas e uma área verde deslumbrante, o cenário perfeito para nossa celebração.</p> -->
+		<section class="section-container">
+			<h2 class="title">Conheça o Espaço</h2>
 
-				<div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="5000" data-ride="true">
-					<ol class="carousel-indicators">
-						<li data-target="#carouselControls" data-slide-to="0" class="active"></li>
-						<li data-target="#carouselControls" data-slide-to="1"></li>
-						<li data-target="#carouselControls" data-slide-to="2"></li>
-						<li data-target="#carouselControls" data-slide-to="3"></li>
-						<li data-target="#carouselControls" data-slide-to="4"></li>
-						<li data-target="#carouselControls" data-slide-to="5"></li>
-						<li data-target="#carouselControls" data-slide-to="6"></li>
-					</ol>
-					
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img class="d-block w-100" src="./image/Image_01.jpeg" alt="Primeiro slide">
-							<div class="carousel-caption d-md-block">
-								<h5>Frente do Espaço</h5>
-								<p>Este será o local principal da festa.</p>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100" src="./image/Image_02.jpeg" alt="Segundo slide">
-							<div class="carousel-caption d-md-block">
-								<h5>Segundo slide</h5>
-								<p>Descrição do segundo slide.</p>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100" src="./image/Image_03.jpeg" alt="Terceiro slide">
-							<div class="carousel-caption d-md-block">
-								<h5>Terceiro slide</h5>
-								<p>Descrição do terceiro slide.</p>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100" src="./image/Image_04.jpeg" alt="Quarto slide">
-							<div class="carousel-caption d-md-block">
-								<h5>Quarto slide</h5>
-								<p>Descrição do quarto slide.</p>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100" src="./image/Image_05.jpeg" alt="Quinto slide">
-							<div class="carousel-caption d-md-block">
-								<h5>Quinto slide</h5>
-								<p>Descrição do quinto slide.</p>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100" src="./image/Image_06.webp" alt="Sexto slide">
-							<div class="carousel-caption d-md-block">
-								<h5>Sexto slide</h5>
-								<p>Descrição do sexto slide.</p>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100" src="./image/Image_07.webp" alt="Sétimo slide">
-							<div class="carousel-caption d-md-block">
-								<h5>Sétimo slide</h5>
-								<p>Descrição do sétimo slide.</p>
-							</div>
+			<div id="carouselControls" class="carousel slide" data-bs-touch="true" data-bs-ride="carousel" data-bs-interval="10000">
+				<div class="carousel-indicators">
+					<button data-bs-target="#carouselControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button data-bs-target="#carouselControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button data-bs-target="#carouselControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					<button data-bs-target="#carouselControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
+					<button data-bs-target="#carouselControls" data-bs-slide-to="4" aria-label="Slide 5"></button>
+					<button data-bs-target="#carouselControls" data-bs-slide-to="5" aria-label="Slide 6"></button>
+				</div>			
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="./image/Image_01.jpeg" alt="Primeiro slide">
+						<div class="carousel-caption d-md-block">
+							<h5>Frente do Espaço</h5>
+							<p>Este será o local principal da festa.</p>
 						</div>
 					</div>
-					<a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Anterior</span>
-					</a>
-					<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Próximo</span>
-					</a>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="./image/Image_02.jpeg" alt="Segundo slide">
+						<div class="carousel-caption d-md-block">
+							<h5>Estacionamento</h5>
+							<p>Estacionamento amplo e seguro para todos os convidados.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="./image/Image_03.jpeg" alt="Terceiro slide">
+						<div class="carousel-caption d-md-block">
+							<h5>Salão de festa</h5>
+							<p>Um espaço amplo e super completo, com churrasqueira, geladeira e friezer.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="./image/Image_04.jpeg" alt="Quarto slide">
+						<div class="carousel-caption d-md-block">
+							<h5>Salão de festa</h5>
+							<p> O espaço conta com várias mesas e uma ampla varanda equipada com armadores de rede e locais para colchonetes.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="./image/Image_07.webp" alt="Quinto slide">
+						<div class="carousel-caption d-md-block">
+							<h5>Piscina</h5>
+							<p>O local dispõe de piscina para uso adulto e de piscina exclusiva para uso infantil.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="./image/Image_06.webp" alt="Sexto slide">
+						<div class="carousel-caption d-md-block">
+							<h5>Campo de Futebol</h5>
+							<p>O espaço conta com um campo de futebol, ideal para momentos de lazer e diversão entre amigos.</p>
+						</div>
+					</div>
 				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				</button>
+
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				</button>
+			</div>
 		</section>
 
 			<section id="attractions" class="section-container">
@@ -178,9 +167,8 @@
 			</footer>
 	</main>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 	<script src="script.js"></script>
 </body>
 </html>
