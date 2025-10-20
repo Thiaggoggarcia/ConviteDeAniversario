@@ -12,12 +12,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<!--Audio -->
-	<audio id="ambient-music" loop >
-		<source src="./music/Sorri, sou rei.mp3" type="audio/mpeg">
-		Seu navegador não suporta o elemento de áudio.
-	</audio>
-	<button id="music-toggle" class="hidden">🔊</button>
+
 	<!-- Ícone do WhatsApp -->
 	<a id="icon-whatsapp" class="hidden" href="https://wa.me/5598984702809" target="_blank">
 		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
@@ -155,20 +150,26 @@
 				</div>
 			</div>
 		</section>
-
-		<section id="messages" class="section-container">
-				<h2>Deixe sua mensagem</h2>
-				<form id="message-form">
-					<textarea id="message-text" placeholder="Escreva aqui sua mensagem para o Thiago..." required></textarea>
-					<input type="text" id="music-suggestion" placeholder="Sugestão de música (opcional)">
-					<button type="submit">Enviar</button>
-				</form>
-				<div id="messages-timeline">
-					<h3>Mural de Recados</h3>
-					<div id="messages-list"></div>
-				</div>
+		<!-- Spotify Embed Playlist -->
+		<section class="section-container">
+			<h2 class="title">Playlist Oficial</h2>
+			<p class="description">O Thiago 3.0 vai ser uma mistura de boas vibrações, risadas e muita música! <br> 
+				<strong>Sua missão:</strong> escolher o som que não pode faltar na nossa playlist oficial.
+				Vamos juntos criar a trilha sonora da noite? 🔊</p>
+			<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5Eu8E4cabB7nTgFr4d05Ky?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 		</section>
-		
+		<section id="messages" class="section-container">
+			<h2 class="title">Deixe sua mensagem</h2>
+			<form id="message-form">
+				<textarea id="message-text" placeholder="Escreva aqui sua mensagem para o Thiago..." required></textarea>
+				<input type="text" id="music-suggestion" placeholder="Sugestão de música (opcional)">
+				<button type="submit">Enviar</button>
+			</form>
+			<div id="messages-timeline">
+				<h3>Mural de Recados</h3>
+				<div id="messages-list"></div>
+			</div>
+		</section>
 		<footer>
 			<p class="quote">“Versão 3.0 — venha viver este momento, intenso e inesquecível.”</p>
 			<p class="hashtag">#AteOAmanhecer</p>

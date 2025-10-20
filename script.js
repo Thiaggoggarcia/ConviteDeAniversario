@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const guestNameInput = document.getElementById('guest-name-input');
     const enterButton = document.getElementById('enter-button');
     const personalizedGreeting = document.getElementById('personalized-greeting');
-    const music = document.getElementById('ambient-music');
-    const musicToggle = document.getElementById('music-toggle');
     const messageForm = document.getElementById('message-form');
     const messagesList = document.getElementById('messages-list');
     const whatsappIcon = document.getElementById('icon-whatsapp');
@@ -30,11 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             welcomeScreen.classList.add('hidden');
             mainContent.classList.remove('hidden');
-            musicToggle.classList.remove('hidden');
             whatsappIcon.classList.remove('hidden');
-
-            // Iniciar música após interação do usuário
-            music.play().catch(error => console.log("A reprodução automática foi bloqueada pelo navegador."));
 
             // Animação de entrada das seções
             observeSections();
@@ -48,29 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 2. CONTROLE DE MÚSICA
-    let index = 0;
-    const playlist =[
-        './music/Sorri, sou rei.mp3',
-        './music/Gata (Barbie) - Mc Tuto, Nattan.mp3'
-    ];
-    music.addEventListener('ended', () => {
-        index = (index + 1) % playlist.length;
-        music.src = playlist[index];
-        music.play();
-    });
-
-    let isPlaying = true;
-    musicToggle.addEventListener('click', () => {
-        if (isPlaying) {
-            music.pause();
-            musicToggle.textContent = '🔇';
-        } else {
-            music.play();
-            musicToggle.textContent = '🔊';
-        }
-        isPlaying = !isPlaying;
-    });
 
     // 3. CONTAGEM REGRESSIVA
     const countdownDate = new Date("Dec 27, 2025 12:00:00").getTime();
