@@ -68,51 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
 
     // 4. MURAL DE MENSAGENS (COM LOCALSTORAGE)
-    const loadMessages = () => {
-        const messages = JSON.parse(localStorage.getItem('guestMessages')) || [];
-        messagesList.innerHTML = ''; // Limpar lista antes de carregar
-        messages.forEach(msg => addMessageToDOM(msg));
-    };
 
-    const addMessageToDOM = (msg) => {
-        const messageItem = document.createElement('div');
-        messageItem.classList.add('message-item');
-        
-        let messageHTML = `<p class="author">${msg.author}</p><p>"${msg.text}"</p>`;
-        if (msg.music) {
-            messageHTML += `<p class="music">🎶 Sugestão: ${msg.music}</p>`;
-        }
-        
-        messageItem.innerHTML = messageHTML;
-        messagesList.prepend(messageItem); // Adiciona a nova mensagem no topo
-    };
     
-    messageForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const guestName = localStorage.getItem('guestName') || 'Anônimo';
-        const messageText = document.getElementById('message-text').value;
-        const musicSuggestion = document.getElementById('music-suggestion').value;
-
-        const newMessage = {
-            author: guestName,
-            text: messageText,
-            music: musicSuggestion,
-        };
-
-        // Salvar no localStorage
-        const messages = JSON.parse(localStorage.getItem('guestMessages')) || [];
-        messages.push(newMessage);
-        localStorage.setItem('guestMessages', JSON.stringify(messages));
-
-        addMessageToDOM(newMessage);
-
-        // Limpar formulário
-        messageForm.reset();
-    });
-
-    // Carregar mensagens existentes ao iniciar
-    loadMessages();
 
     // 5. ANIMAÇÃO SCROLL (MICRO-INTERAÇÃO)
     const observeSections = () => {

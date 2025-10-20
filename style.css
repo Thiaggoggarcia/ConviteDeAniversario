@@ -112,26 +112,6 @@ body {
     }
 }
 
-/* CONTROLE DE MÚSICA
-#music-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: rgba(30, 30, 30, 0.8);
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 1000;
-  transition: all 0.3s ease;
-}
-
-#music-toggle:hover {
-    color: var(--dark-bg);
-    transform: scale(1.2);
-} */
 
 /* CONTEÚDO PRINCIPAL */
 #main-content {
@@ -334,9 +314,10 @@ body {
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 2rem;
+    align-items: center;
 }
 
-#message-form textarea, #message-form input {
+#message-form textarea{
     width: 100%;
     padding: 15px;
     font-size: 1rem;
@@ -349,6 +330,7 @@ body {
 
 #message-form button {
     padding: 15px;
+    width: 40%;
     font-size: 1.1rem;
     font-weight: 600;
     background: var(--gold);
@@ -356,44 +338,14 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.9s ease;
 }
-
 #message-form button:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--glow-color);
 }
 
-#messages-timeline h3 {
-    text-align: center;
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-}
 
-#messages-list .message-item {
-    background: var(--dark-bg);
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    border-left: 2px solid var(--gold);
-    animation: slideUpMessage 0.5s ease-out;
-}
-
-.message-item p {
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-.message-item .author {
-    font-weight: 600;
-    color: var(--gold);
-}
-
-.message-item .music {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: var(--text-secondary);
-}
 
 
 /* RODAPÉ */
