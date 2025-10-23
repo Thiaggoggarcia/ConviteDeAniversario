@@ -160,8 +160,8 @@
 		</section>
 		<section id="messages" class="section-container">
 			<h2 class="">Ainda falta a sua música na playlist?</h2>
-			<form id="message-form">
-				<textarea id="message-text" placeholder="Envie suas músicas aqui..." required rows="5"></textarea>
+			<form id="message-form" method="POST" action="/music">
+				<textarea name="message-text" placeholder="Envie suas músicas aqui..." required rows="5"></textarea>
 				<button type="submit">Enviar</button>
 			</form>
 		</section>
