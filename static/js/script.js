@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Armazenar nome no localStorage
-        localStorage.setItem('guestName', guestName);
+        //localStorage.setItem('guestName', guestName);
         
         // Exibir saudação personalizada
         personalizedGreeting.textContent = `${guestName}, saiba que cada nova versão é feita de boas histórias — e a sua presença torna essa ainda mais inesquecível 🥂`;
@@ -63,12 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }, 1000);
-    
-    // 3. PLAYLIST NO SPOTIFY
-    async function submitMusic(params) {
-        
-    }
-
 
     // 4. ANIMAÇÃO SCROLL (MICRO-INTERAÇÃO)
     const observeSections = () => {
@@ -88,3 +82,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 });
+
+// 3. PLAYLIST NO SPOTIFY
+const form = document.getElementById('music-form');
+async function submitMusic(event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const response = await fetch('/music', {
+        method: 'POST',
+        body: formData
+    });
+
+    const result = await response.json();
+    const music_list = document.getElementById('music-list');
+    music_list.innerHTML = '';
+
+    if (result.status === "success") {
+        result.tracks.forEach(track => {
+            const card = document.createElement('div');
+            card.classList.add('track-card');
+
+            card.innerHTML = `
+                <img src="${track.image_url}" alt="${track.name} Album Art">
+                <div class="track-info">
+                    <h4><strong>${track.name}</strong></h4>
+                    <span>${track.artist} - <em>${track.album}</em></span>
+                    ${track.preview_url ? `<br><audio controls src="${track.preview_url}" type="audio/mpeg" style="width:150px;"></audio>` : ""}
+                </div>
+                <button class="add-btn" onclick="addMusic('${track.id}', '${track.name}')">Adicionar</button>
+                `;
+            music_list.appendChild(card);
+        });
+    }
+    else {
+        music_list.innerHTML = `<p style="color:red">Nenhuma música encontrada.</p>`;
+      }
+}
+
+async function addMusic(trackId, nomeMusica) {
+    alert(`🎵 Música selecionada: ${nomeMusica}\n(ID: ${trackId})`);
+    // Aqui futuramente faremos a requisição para adicionar na playlist
+}
