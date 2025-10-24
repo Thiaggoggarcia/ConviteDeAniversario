@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const guestNameInput = document.getElementById('guest-name-input');
     const enterButton = document.getElementById('enter-button');
     const personalizedGreeting = document.getElementById('personalized-greeting');
-    const messageForm = document.getElementById('message-form');
-    const messagesList = document.getElementById('messages-list');
     const whatsappIcon = document.getElementById('icon-whatsapp');
 
     // 1. TELA DE ENTRADA E PERSONALIZAÇÃO
@@ -42,8 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
-    // 3. CONTAGEM REGRESSIVA
+    // 2. CONTAGEM REGRESSIVA
     const countdownDate = new Date("Dec 27, 2025 12:00:00").getTime();
 
     const countdownFunction = setInterval(() => {
@@ -66,12 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }, 1000);
-
-    // 4. MURAL DE MENSAGENS (COM LOCALSTORAGE)
-
     
+    // 3. PLAYLIST NO SPOTIFY
+    async function submitMusic(params) {
+        
+    }
 
-    // 5. ANIMAÇÃO SCROLL (MICRO-INTERAÇÃO)
+
+    // 4. ANIMAÇÃO SCROLL (MICRO-INTERAÇÃO)
     const observeSections = () => {
         const sections = document.querySelectorAll('.section-container');
         const observer = new IntersectionObserver((entries) => {

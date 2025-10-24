@@ -13,6 +13,7 @@ REDIRECT_URI = os.getenv("REDIRECT_URI")
 SCOPE = os.getenv("SCOPE")
 PLAYLIST_ID = os.getenv("PLAYLIST_ID")
 
+
 # Inicializa o cliente Spotify
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
                                                client_secret=CLIENT_SECRET,
@@ -35,4 +36,6 @@ def add_music():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    
+
     
