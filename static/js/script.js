@@ -109,9 +109,11 @@ async function submitMusic(event) {
                     <h6><strong>${track.name}</strong></h6>
                     <span>${track.artist} - <em>${track.album}</em></span>
                 </div>
-                <button class="add-btn" onclick="addMusic('${track.id}, ${track.name}')">Adicionar</button>
+                <button class="add-btn" onclick="addMusic('${track.id}', '${decodeURIComponent(track.name)}')">Adicionar</button>
                 `;
             music_list.appendChild(card);
+
+            
         });
     }
     else {
@@ -119,18 +121,30 @@ async function submitMusic(event) {
       }
 }
 
-async function addMusic(trackId, trackName) {
-    const response = await fetch('/playlist', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({track_id: trackId})
-    });
-    const result = await response.json();
-    if (result.status == "success") {
-        alert(`🎵 ${trackName} adicionada à playlist!`);
-        return;
-    }
-    else {
-        alert(`❌ Erro ao adicionar a música. Tente novamente.`);
-    }   
-}
+window.addMusic = async function (trackId, trackName) {
+    try {
+        const response = await fetch('/playlist', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({track_id: trackId})
+        });
+        const result = await response.json();
+        if (result.status == "success") {
+            alert(`🎵 ${decodeURIComponent(trackName)} adicionada à playlist!`);
+            
+            const iframe = document.getElementById('spotify-playlist');
+            const src = iframe.src;
+            iframe.src = '';
+            setTimeout(() => {
+                iframe.src = src;
+            }, 100);
+        }
+
+        else {
+            alert(`❌ Erro ao adicionar a música. Tente novamente. ${result.status}`);
+        }
+    } catch (err) {
+        console.error(err);
+        alert("❌ Ocorreu um erro inesperado.");
+    }  
+};
