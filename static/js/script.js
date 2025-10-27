@@ -106,11 +106,10 @@ async function submitMusic(event) {
             card.innerHTML = `
                 <img src="${track.image_url}" alt="${track.name} Album Art">
                 <div class="track-info">
-                    <h4><strong>${track.name}</strong></h4>
+                    <h6><strong>${track.name}</strong></h6>
                     <span>${track.artist} - <em>${track.album}</em></span>
-                    ${track.preview_url ? `<br><audio controls src="${track.preview_url}" type="audio/mpeg" style="width:150px;"></audio>` : ""}
                 </div>
-                <button class="add-btn" onclick="addMusic('${track.id}', '${track.name}')">Adicionar</button>
+                <button class="add-btn" onclick="addMusic('${track.id}, ${track.name}')">Adicionar</button>
                 `;
             music_list.appendChild(card);
         });
@@ -120,7 +119,18 @@ async function submitMusic(event) {
       }
 }
 
-async function addMusic(trackId, nomeMusica) {
-    alert(`🎵 Música selecionada: ${nomeMusica}\n(ID: ${trackId})`);
-    // Aqui futuramente faremos a requisição para adicionar na playlist
+async function addMusic(trackId, trackName) {
+    const response = await fetch('/playlist', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({track_id: trackId})
+    });
+    const result = await response.json();
+    if (result.status == "success") {
+        alert(`🎵 ${trackName} adicionada à playlist!`);
+        return;
+    }
+    else {
+        alert(`❌ Erro ao adicionar a música. Tente novamente.`);
+    }   
 }
