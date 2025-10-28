@@ -26,7 +26,7 @@ def get_user_spotify():
   if sp_oauth.is_token_expired(token_info):
       token_info = sp_oauth.refresh_access_token(token_info['refresh_token'])
   return spotipy.Spotify(auth=token_info['access_token'])
-
+ 
 @app.route('/')
 def index():
   return render_template('index.html')
@@ -86,7 +86,7 @@ def add_playlist():
     return jsonify({"status":"error", "message": str(e)}),500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
     
 
     
