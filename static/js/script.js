@@ -121,6 +121,18 @@ async function submitMusic(event) {
       }
 }
 
+function atualizarPlaylist() {
+    const iframe = document.getElementById("spotify-playlist");
+    const src = iframe.src;
+
+    iframe.style.opacity = 0.5; // efeito de fade rápido
+    iframe.src = ""; // força recarregar
+    setTimeout(() => {
+        iframe.src = src;
+        iframe.style.opacity = 1;
+    }, 300);
+}
+
 window.addMusic = async function (trackId, trackName) {
     try {
         const response = await fetch('/playlist', {
@@ -132,14 +144,12 @@ window.addMusic = async function (trackId, trackName) {
         if (result.status == "success") {
             alert(`🎵 ${decodeURIComponent(trackName)} adicionada à playlist!`);
             
-            const iframe = document.getElementById('spotify-playlist');
-            const src = iframe.src;
-            iframe.src = '';
-            setTimeout(() => {
-                iframe.src = src;
-            }, 100);
+            setInterval(() => {
+            const iframe = document.getElementById("spotify-playlist");
+            iframe.src = iframe.src;
+            }, 30000); // atualiza a cada 30 segundos
+            atualizarPlaylist();
         }
-
         else {
             alert(`❌ Erro ao adicionar a música. Tente novamente. ${result.status}`);
         }
