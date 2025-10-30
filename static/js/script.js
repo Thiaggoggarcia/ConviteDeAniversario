@@ -150,8 +150,11 @@ window.addMusic = async function (trackId, trackName) {
             }, 30000); // atualiza a cada 30 segundos
             atualizarPlaylist();
         }
+        else if (result.status == "duplicate") {
+            alert(`Essa música já está na playlist!`);
+        }
         else {
-            alert(`❌ Erro ao adicionar a música. Tente novamente. ${result.status}`);
+            alert("❌ Ocorreu um erro ao adicionar a música.");
         }
     } catch (err) {
         console.error(err);

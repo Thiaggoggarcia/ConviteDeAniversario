@@ -79,9 +79,24 @@ def add_playlist():
   if not track_id:
     return jsonify({"status":"error"}),400
 
+  # 🔍 1️⃣ Verificar se a música já está na playlist
+  existing_tracks = []
+  results = get_user_spotify().playlist_items(PLAYLIST_ID, fields="items.track.id,next")
+
+  while results:
+      existing_tracks.extend([item['track']['id'] for item in results['items'] if item['track']])
+      if results['next']:
+          results = get_user_spotify().next(results)
+      else:
+          break
+
+  if track_id in existing_tracks:
+      return jsonify({"status": "duplicate", "message": "Música já está na playlist"}), 200
+
   try:
     get_user_spotify().playlist_add_items(PLAYLIST_ID, [track_id])
     return jsonify({"status":"success"}),200
+
   except Exception as e:
     return jsonify({"status":"error", "message": str(e)}),500
 
