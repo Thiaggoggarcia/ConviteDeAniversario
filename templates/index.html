@@ -1,179 +1,198 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Thiago 3.0 — Sunset Edition</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-</head>
-<body>
-
-	<!-- Ícone do WhatsApp -->
-	<a id="icon-whatsapp" class="hidden" href="https://wa.me/5598984702809" target="_blank">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-	</a>
-	<!--Pagina de Boas vindas Festa até o amanhecer #AteOAmanhecer-->
-	<div id="welcome-screen">
-		<div class="welcome-content">
-			<h1>Thiago Garcia 3.0</h1>
-			<p>#AteOAmanhecer</p>
-			<input type="text" id="guest-name-input" placeholder="Digite seu nome e entre na festa" autocomplete="off" />
-			<button id="enter-button">Entrar</button>
+	<!DOCTYPE html>
+	<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Thiago 3.0 — Sunset Edition</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+	</head>
+	<body>
+		<!--Pagina de Boas vindas Festa até o amanhecer #AteOAmanhecer-->
+		<div id="welcome-screen">
+			<div class="welcome-content">
+				<h1>Thiago Garcia 3.0</h1>
+				<p>#AteOAmanhecer</p>
+				<input type="text" id="guest-name-input" placeholder="Digite seu nome e entre na festa" autocomplete="off" />
+				<button id="enter-button">Entrar</button>
+			</div>
 		</div>
-	</div>
 
-	<main id="main-content" class="hidden">
-	
-		<header class="main-header">
-			<h2 id="personalized-greeting"></h2>
-		</header>
+		<main id="main-content" class="hidden">
+		
+			<header class="main-header">
+				<h2 id="personalized-greeting"></h2>
+			</header>
 
-		<section id="event" class="section-container">
-			<div class="countdown-container">
-				<h3>Contagem Regressiva</h3>
-				<div id="countdown">
-					<div class="time-unit"><span id="days">00</span><span>Dias</span></div>
-					<div class="time-unit"><span id="hours">00</span><span>Horas</span></div>
-					<div class="time-unit"><span id="minutes">00</span><span>Minutos</span></div>
-					<div class="time-unit"><span id="seconds">00</span><span>Segundos</span></div>
+			<section id="event" class="section-container">
+				<div class="countdown-container">
+					<h3>Contagem Regressiva</h3>
+					<div id="countdown">
+						<div class="time-unit"><span id="days">00</span><span>Dias</span></div>
+						<div class="time-unit"><span id="hours">00</span><span>Horas</span></div>
+						<div class="time-unit"><span id="minutes">00</span><span>Minutos</span></div>
+						<div class="time-unit"><span id="seconds">00</span><span>Segundos</span></div>
+					</div>
 				</div>
+
+				<div class="event-details">
+						<h2 class="title">O Evento</h2>
+						<p><strong>Data:</strong> 27 e 28 de Dezembro</p>
+						<p><strong>Horário:</strong> Almoço às 12h, segue noite adentro</p>
+						<p><strong>Local:</strong> Chácara Alberto Eventos<br><em>(Endereço: R. São Domingos - Laranjal, São José de Ribamar - MA)</em></p>
+						<p class="description">Prepare-se para uma celebração inesquecível, com feijoada, churrasco, drinks refrescantes e muita música boa até o amanhecer.</p>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7124.166416556187!2d-44.14917473490211!3d-2.55752418393617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f6975383b8d7cf%3A0x10d8acc031d15856!2sAlberto%20Eventos!5e1!3m2!1spt-BR!2sbr!4v1760465193897!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<a href="https://maps.app.goo.gl/brhwqcwBnfEYGyYQA" target="_blank" class="map-button">Acesse o Mapa</a>
+				</div>
+			</section>
+
+			<section class="section-container">
+				<h2 class="title">Conheça o Espaço</h2>
+
+				<div id="carouselControls" class="carousel slide" data-bs-touch="true" data-bs-ride="carousel" data-bs-interval="10000">
+					<div class="carousel-indicators">
+						<button data-bs-target="#carouselControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button data-bs-target="#carouselControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button data-bs-target="#carouselControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+						<button data-bs-target="#carouselControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
+						<button data-bs-target="#carouselControls" data-bs-slide-to="4" aria-label="Slide 5"></button>
+						<button data-bs-target="#carouselControls" data-bs-slide-to="5" aria-label="Slide 6"></button>
+					</div>			
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-100" src="{{url_for('static', filename='img/Image_01.jpeg')}}" alt="Primeiro slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Frente do Espaço</h5>
+								<p>Este será o local principal da festa.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="{{url_for('static', filename='img/Image_02.jpeg')}}" alt="Segundo slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Estacionamento</h5>
+								<p>Estacionamento amplo e seguro para todos os convidados.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="{{url_for('static', filename='img/Image_03.jpeg')}}" alt="Terceiro slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Salão de festa</h5>
+								<p>Um espaço amplo e super completo, com churrasqueira, geladeira e friezer.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="{{url_for('static', filename='img/Image_04.jpeg')}}" alt="Quarto slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Salão de festa</h5>
+								<p> O espaço conta com várias mesas e uma ampla varanda equipada com armadores de rede e locais para colchonetes.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="{{url_for('static', filename='img/Image_07.webp')}}" alt="Quinto slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Piscina</h5>
+								<p>O local dispõe de piscina para uso adulto e de piscina exclusiva para uso infantil.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="{{url_for('static', filename='img/Image_06.webp')}}" alt="Sexto slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Campo de Futebol</h5>
+								<p>O espaço conta com um campo de futebol, ideal para momentos de lazer e diversão entre amigos.</p>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					</button>
+
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					</button>
+				</div>
+			</section>
+
+			<section id="attractions" class="section-container">
+				<h2 class="title">Atrações</h2>
+				<div class="attractions-grid">
+					<div id="card-1" class="card">
+						<h3>Feijoada</h3>
+						<p>Prepare-se para saborear uma feijoada irresistível, cheia de sabor e energia pra festa durar até o amanhecer!</p>
+					</div>
+					<div id="card-2" class="card">
+						<h3>Churrasco</h3>
+						<p>Vai rolar aquele churrasco irresistível: carne no fogo, música boa e muita diversão garantida!</p>
+					</div>
+					<div id="card-3" class="card">
+						<h3>Drinks</h3>
+						<p>Drinks incríveis que vão deixar sua festa ainda mais animada!</p>
+					</div>
+					<div id="card-4" class="card">
+						<h3>Música</h3>
+						<p>Vai ter música de todos os estilos, agradando todos os gostos e mantendo a festa animada do início ao fim!</p>
+					</div>
+					<div id="card-5" class="card">
+						<h3>Lazer</h3>
+						<p>Um espaço muito amplo com piscina, campo de futebol e muita área para conversar e relaxar.</p>
+					</div>
+					<div class="card">
+						<h3>Playground</h3>
+						<p>Para as crianças teremos piscina infantil, pula-pula, escorregador e muito mais!</p>
+					</div>
+				</div>
+			</section>
+			<section class="section-container">
+				<h2 class="title">Não Esqueça de Sua Bebida 🍹</h2>
+				<p class="description">
+					Pra manter o clima leve e divertido, cada um traz a sua bebida favorita! <br>
+					Vale cerveja, vinho, gin, whisky ou aquela bebida especial que não pode faltar para você. <br><br>
+					O importante é vir pronto pra se divertir e fazer parte dessa celebração!
+				</p>
+			</section>
+
+			<!-- Spotify Playlist -->
+			<section class="section-container">
+				<h2 class="title">Playlist Oficial</h2>
+				<p class="description">O Thiago 3.0 vai ser uma mistura de boas vibrações, risadas e muita música! <br><br>
+					<strong>Sua missão:</strong> escolher o som que não pode faltar na nossa playlist oficial.
+					Vamos juntos criar a trilha sonora da noite? 🔊</p>
+				<iframe id="spotify-playlist" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5Eu8E4cabB7nTgFr4d05Ky?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+			</section>
+			<section class="section-container">
+				<h2 class="title">Ainda falta a sua música na playlist ?</h2>
+				<form id ="music-form" onsubmit="submitMusic(event)">
+					<input name="input-text" placeholder="Envie suas músicas aqui..." required></textarea>
+					<button type="submit">Buscar</button>
+				</form>
+				<div id="music-list"></div>
+			</section>
+
+			<section class="section-container">
+			<h2 class="title">Ainda tem Dúvidas?</h2>
+			<p class="description">
+				Se pintar alguma dúvida sobre o aniversário, é só chamar no WhatsApp!    
+				<br><br>
+				<!-- Ícone do WhatsApp -->
+			</p>
+			<div id="whatsapp">
+				<a href="https://wa.me/5598984702809" target="_blank">
+					Falar no WhatsApp
+				</a>
 			</div>
-
-			<div class="event-details">
-					<h2 class="title">O Evento</h2>
-					<p><strong>Data:</strong> 27 e 28 de Dezembro</p>
-					<p><strong>Horário:</strong> Almoço às 12h, segue noite adentro</p>
-					<p><strong>Local:</strong> Chácara Alberto Eventos<br><em>(Endereço: R. São Domingos - Laranjal, São José de Ribamar - MA)</em></p>
-					<p class="description">Prepare-se para uma celebração inesquecível, com feijoada, churrasco, drinks refrescantes e muita música boa até o amanhecer.</p>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7124.166416556187!2d-44.14917473490211!3d-2.55752418393617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f6975383b8d7cf%3A0x10d8acc031d15856!2sAlberto%20Eventos!5e1!3m2!1spt-BR!2sbr!4v1760465193897!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-					<a href="https://maps.app.goo.gl/brhwqcwBnfEYGyYQA" target="_blank" class="map-button">Acesse o Mapa</a>
-			</div>
 		</section>
 
-		<section class="section-container">
-			<h2 class="title">Conheça o Espaço</h2>
+			<footer>
+				<p class="quote">“Versão 3.0 — venha viver este momento, intenso e inesquecível.”</p>
+				<p class="hashtag">#AteOAmanhecer</p>
+			</footer>
+		</main>
 
-			<div id="carouselControls" class="carousel slide" data-bs-touch="true" data-bs-ride="carousel" data-bs-interval="10000">
-				<div class="carousel-indicators">
-					<button data-bs-target="#carouselControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-					<button data-bs-target="#carouselControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
-					<button data-bs-target="#carouselControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
-					<button data-bs-target="#carouselControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
-					<button data-bs-target="#carouselControls" data-bs-slide-to="4" aria-label="Slide 5"></button>
-					<button data-bs-target="#carouselControls" data-bs-slide-to="5" aria-label="Slide 6"></button>
-				</div>			
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img class="d-block w-100" src="{{url_for('static', filename='img/Image_01.jpeg')}}" alt="Primeiro slide">
-						<div class="carousel-caption d-md-block">
-							<h5>Frente do Espaço</h5>
-							<p>Este será o local principal da festa.</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img class="d-block w-100" src="{{url_for('static', filename='img/Image_02.jpeg')}}" alt="Segundo slide">
-						<div class="carousel-caption d-md-block">
-							<h5>Estacionamento</h5>
-							<p>Estacionamento amplo e seguro para todos os convidados.</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img class="d-block w-100" src="{{url_for('static', filename='img/Image_03.jpeg')}}" alt="Terceiro slide">
-						<div class="carousel-caption d-md-block">
-							<h5>Salão de festa</h5>
-							<p>Um espaço amplo e super completo, com churrasqueira, geladeira e friezer.</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img class="d-block w-100" src="{{url_for('static', filename='img/Image_04.jpeg')}}" alt="Quarto slide">
-						<div class="carousel-caption d-md-block">
-							<h5>Salão de festa</h5>
-							<p> O espaço conta com várias mesas e uma ampla varanda equipada com armadores de rede e locais para colchonetes.</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img class="d-block w-100" src="{{url_for('static', filename='img/Image_07.webp')}}" alt="Quinto slide">
-						<div class="carousel-caption d-md-block">
-							<h5>Piscina</h5>
-							<p>O local dispõe de piscina para uso adulto e de piscina exclusiva para uso infantil.</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img class="d-block w-100" src="{{url_for('static', filename='img/Image_06.webp')}}" alt="Sexto slide">
-						<div class="carousel-caption d-md-block">
-							<h5>Campo de Futebol</h5>
-							<p>O espaço conta com um campo de futebol, ideal para momentos de lazer e diversão entre amigos.</p>
-						</div>
-					</div>
-				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				</button>
-
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				</button>
-			</div>
-		</section>
-
-		<section id="attractions" class="section-container">
-			<h2 class="title">Atrações</h2>
-			<div class="attractions-grid">
-				<div id="card-1" class="card">
-					<h3>Feijoada</h3>
-					<p>Prepare-se para saborear uma feijoada irresistível, cheia de sabor e energia pra festa durar até o amanhecer!</p>
-				</div>
-				<div id="card-2" class="card">
-					<h3>Churrasco</h3>
-					<p>Vai rolar aquele churrasco irresistível: carne no fogo, música boa e muita diversão garantida!</p>
-				</div>
-				<div id="card-3" class="card">
-					<h3>Drinks & Coquetéis</h3>
-					<p>Drinks incríveis que vão deixar sua festa ainda mais animada!</p>
-				</div>
-				<div id="card-4" class="card">
-					<h3>Música</h3>
-					<p>Vai ter música de todos os estilos, agradando todos os gostos e mantendo a festa animada do início ao fim!</p>
-				</div>
-				<div id="card-5" class="card">
-					<h3>Lazer</h3>
-					<p>Um espaço muito amplo com piscina, campo de futebol e muita área para conversar e relaxar.</p>
-				</div>
-				<div class="card">
-					<h3>Playground</h3>
-					<p>Para as crianças teremos piscina infantil, pula-pula, escorregador e muito mais!</p>
-				</div>
-			</div>
-		</section>
-		<!-- Spotify Embed Playlist -->
-		<section class="section-container">
-			<h2 class="title">Playlist Oficial</h2>
-			<p class="description">O Thiago 3.0 vai ser uma mistura de boas vibrações, risadas e muita música! <br> 
-				<strong>Sua missão:</strong> escolher o som que não pode faltar na nossa playlist oficial.
-				Vamos juntos criar a trilha sonora da noite? 🔊</p>
-			<iframe id="spotify-playlist" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5Eu8E4cabB7nTgFr4d05Ky?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-		</section>
-		<section class="section-container">
-			<h2 class="title">Ainda falta a sua música na playlist ?</h2>
-			<form id ="music-form" onsubmit="submitMusic(event)">
-				<input name="input-text" placeholder="Envie suas músicas aqui..." required></textarea>
-				<button type="submit">Enviar</button>
-			</form>
-			<div id="music-list"></div>
-		</section>
-		<footer>
-			<p class="quote">“Versão 3.0 — venha viver este momento, intenso e inesquecível.”</p>
-			<p class="hashtag">#AteOAmanhecer</p>
-		</footer>
-	</main>
-
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-	<script src="{{url_for('static', filename='js/script.js')}}"></script>
-</body>
-</html>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+		<script src="{{url_for('static', filename='js/script.js')}}"></script>
+	</body>
+	</html>

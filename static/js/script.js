@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const guestNameInput = document.getElementById('guest-name-input');
     const enterButton = document.getElementById('enter-button');
     const personalizedGreeting = document.getElementById('personalized-greeting');
-    const whatsappIcon = document.getElementById('icon-whatsapp');
 
     // 1. TELA DE ENTRADA E PERSONALIZAÇÃO
     enterButton.addEventListener('click', () => {
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             welcomeScreen.classList.add('hidden');
             mainContent.classList.remove('hidden');
-            whatsappIcon.classList.remove('hidden');
 
             // Animação de entrada das seções
             observeSections();
@@ -126,7 +124,7 @@ window.addMusic = async function (trackId, trackName) {
         const response = await fetch('/playlist', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({track_id: trackId})
+            body: JSON.stringify({track_id: trackId, track_name: trackName })
         });
         const result = await response.json();
         if (result.status == "success") {
