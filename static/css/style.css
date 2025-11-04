@@ -255,7 +255,7 @@ body {
 .carousel-caption p {
     color: var(--text-secondary);
     font-size: clamp(0.78rem, 1.5vw, 1rem);
-    margin-bottom: 4px;
+    margin-bottom: 20px
 }
 
 /*ATRAÇÕES */
@@ -339,6 +339,9 @@ body {
 #music-form button:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px var(--glow-color);
+}
+#beer{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../img/Bebidas.png') no-repeat center/cover;
 }
 
 /*LISTA DE MÚSICAS */
@@ -433,5 +436,8 @@ button, input {
     }
     .description {
         text-align: justify;
+    }
+    .carousel-caption p{
+        margin-bottom: 6px;
     }
 }
