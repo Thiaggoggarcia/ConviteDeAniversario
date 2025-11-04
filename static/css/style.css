@@ -31,7 +31,7 @@ body {
     align-items: center;
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-        url("../img/Gemini_Gener.png") no-repeat center/cover;
+        url("../img/Gemini_Gener.jpg") no-repeat center/cover;
     text-align: center;
     padding: 20px;
     animation: fadeIn 1.5s ease-in-out;
@@ -300,7 +300,7 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../img/Musica.webp') no-repeat center/cover;
 }
 #card-5{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../img/Lazer.png') no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../img/Lazer.jpg') no-repeat center/cover;
 }
 .card:hover {
     transform: translateY(-10px);
@@ -341,7 +341,7 @@ body {
     box-shadow: 0 0 15px var(--glow-color);
 }
 #beer{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../img/Bebidas.png') no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../img/Bebidas.jpg') no-repeat center/cover;
 }
 
 /*LISTA DE MÚSICAS */
