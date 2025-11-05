@@ -83,7 +83,7 @@ def add_playlist():
   # 🔍 1️⃣ Verificar se a música já está na playlist
   existing_tracks = []
   results = get_user_spotify().playlist_items(PLAYLIST_ID, fields="items.track.name,next")
-  print(results)
+
 
   while results:
       existing_tracks.extend([item['track']['name'] for item in results['items'] if item['track']])
