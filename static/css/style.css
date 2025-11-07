@@ -2,7 +2,7 @@
 :root {
     --gold: #FFD700;
     --burnt-orange: #CC5500;
-    --burnt-purple: #6600cc;
+    --burnt-purple: #ff5550;
     --dark-bg: #121212;
     --dark-card: #1E1E1E;
     --text-primary: #FFFFFF;
@@ -134,7 +134,7 @@ body {
     padding-inline: 1rem;
 }
 #personalized-greeting span {
-    background: -webkit-linear-gradient(45deg, var(--gold), var(--burnt-purple));
+    background: -webkit-linear-gradient(220deg, var(--gold), var(--burnt-purple));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -342,11 +342,35 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 15px var(--glow-color);
 }
+
 #beer{
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../img/Bebidas.jpg') no-repeat center/cover;
 }
 
 /*LISTA DE MÚSICAS */
+#music-list {
+    overflow-y: auto;
+    max-height: 500px;
+    padding-right: 5px;
+}
+
+/* Fundo do trilho (track) */
+#music-list::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--dark-card);
+}
+
+/* Polegar (thumb) */
+#music-list::-webkit-scrollbar-thumb {
+    background-color: var(--gold);
+    border-radius: 8px;
+}
+
+/* Efeito hover */
+#music-list::-webkit-scrollbar-thumb:hover {
+    background-color: var(--burnt-orange);
+}
+
 .track-card {
     display: flex;
     align-items: center;

@@ -13,6 +13,8 @@ REDIRECT_URI = os.getenv("REDIRECT_URI")
 SCOPE = os.getenv("SCOPE")
 PLAYLIST_ID = os.getenv("PLAYLIST_ID")
 
+limite_musicas = 40
+
 app = Flask(__name__)
 
 # Função auxiliar que sempre obtém o token válido do .cache
@@ -41,11 +43,6 @@ def login():
 @app.route('/callback')
 def callback():
   sp_oauth = SpotifyOAuth(client_id=CLIENT_ID,client_secret=CLIENT_SECRET,redirect_uri=REDIRECT_URI,scope=SCOPE,cache_path=".cache-user")
-  # Manipula o callback após o login do Spotify
-  code = request.args.get('code')
-  token_info = sp_oauth.get_access_token(code)
-  print('Callback - Login realizado com sucesso!')
-
   return redirect(url_for('index'))
 
 @app.route('/music', methods=['POST'])
@@ -53,7 +50,7 @@ def add_music():
   music = request.form.get('input-text')
   sp_app = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=CLIENT_ID,client_secret=CLIENT_SECRET))
   # Pesquisa a música no Spotify
-  result = sp_app.search(q=music, limit=10, type='track')
+  result = sp_app.search(q=music, limit=limite_musicas, type='track')
   
   if not result['tracks']['items']:
     return jsonify({"status":"error", "message": "Música não encontrada"}),404
