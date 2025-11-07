@@ -124,7 +124,7 @@ window.addMusic = async function (trackId, trackName) {
         const response = await fetch('/playlist', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({track_id: trackId, track_name: trackName })
+            body: JSON.stringify({track_id: trackId})
         });
         const result = await response.json();
         if (result.status == "success") {
@@ -140,7 +140,7 @@ window.addMusic = async function (trackId, trackName) {
             }, 300);
         }
         else if (result.status == "duplicate") {
-            alert(`Essa música já está na playlist!`);
+            alert(`⚠️ Essa música já foi adicionada à playlist!`);
         }
         else {
             alert("❌ Ocorreu um erro ao adicionar a música.");
