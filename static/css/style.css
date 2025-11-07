@@ -2,6 +2,7 @@
 :root {
     --gold: #FFD700;
     --burnt-orange: #CC5500;
+    --burnt-purple: #6600cc;
     --dark-bg: #121212;
     --dark-card: #1E1E1E;
     --text-primary: #FFFFFF;
@@ -99,11 +100,6 @@ body {
 }
 
 #whatsapp > a {
-    /* width: 50px;
-    padding: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 999; */
     background-color: #25D366; /* verde oficial WhatsApp */
     color: var(--dark-card);
     padding: 10px 20px;
@@ -136,6 +132,12 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-inline: 1rem;
+}
+#personalized-greeting span {
+    background: -webkit-linear-gradient(45deg, var(--gold), var(--burnt-purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*SEÇÕES GERAIS */

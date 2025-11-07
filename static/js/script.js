@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //localStorage.setItem('guestName', guestName);
         
         // Exibir saudação personalizada
-        personalizedGreeting.textContent = `${guestName}, saiba que cada nova versão é feita de boas histórias — e a sua presença torna essa ainda mais inesquecível 🥂`;
+        personalizedGreeting.innerHTML = `<span>${guestName}</span>, saiba que cada nova versão é feita de boas histórias — e a sua presença torna essa ainda mais inesquecível 🥂`;
         
         // Transição de telas
         welcomeScreen.style.animation = 'fadeOut 1s forwards';
