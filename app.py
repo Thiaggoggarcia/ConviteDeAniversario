@@ -43,6 +43,9 @@ def login():
 @app.route('/callback')
 def callback():
   sp_oauth = SpotifyOAuth(client_id=CLIENT_ID,client_secret=CLIENT_SECRET,redirect_uri=REDIRECT_URI,scope=SCOPE,cache_path=".cache-user")
+  code = request.args.get('code')
+  token_info = sp_oauth.get_access_token(code)
+  print('Callback - Login realizado com sucesso!')
   return redirect(url_for('index'))
 
 @app.route('/music', methods=['POST'])
