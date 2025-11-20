@@ -87,8 +87,37 @@ body {
 }
 #enter-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px var(--glow-color);
+    background-color: var(--glow-color);  /* tom mais escuro pra hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
+
+
+#presenca-button {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+#presenca-button > a {
+    background-color: var(--gold); /* verde oficial WhatsApp */
+    color: var(--dark-bg);
+    padding: 10px 20px;
+    border: none;
+    margin-inline: auto;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    transition: all 0.3s ease;
+}
+#presenca-button > a:hover {
+    transform: scale(1.05);
+    background-color: var(--glow-color);  /* tom mais escuro pra hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+ }
+
 
 /*BOTÃO WHATSAPP */
 #whatsapp {
